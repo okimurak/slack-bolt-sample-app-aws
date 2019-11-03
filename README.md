@@ -27,8 +27,28 @@ $env:SLACK_BOT_TOKEN = "<Slack Signing Secret is Here>"
 
 ```
 
-
 ```
+# Packege Install
 npm install
 ```
 
+### Launch
+
+```
+node ./src/app.js
+```
+
+Use an application that proxies to the local host, such as [ngrok](https://ngrok.com/).
+
+## Deploy
+
+use serverless
+
+```
+# Please install for global options.
+npm install serverless  --g
+```
+
+```
+serverless deploy
+```
