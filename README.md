@@ -1,53 +1,41 @@
-# Slack_bolt_sample
-It is Slack bolt Sample Repository.
+# Slack bolt sample app
+It is Slack bolt Sample Repository in AWS.
+Use [serverless Framework](https://serverless.com/).
+
+ - [Bolt Tutorial](https://slack.dev/bolt/ja-jp/tutorial/getting-started)
 
 # Requirements
 
-- Node
+- Node 10.13+
 
 # Installation
 
 ## Configure ENV
 
-### Mac OS
 ```
-export SLACK_SIGNING_SECRET=<Slack Signing Secret is Here>
-export SLACK_BOT_TOKEN=<Bot User Token is Here>
+cp .env.default .env
 ```
 
-### Windows
-```
-## CMD
-set SLACK_SIGNING_SECRET=<Slack Signing Secret is Here>
-set SLACK_BOT_TOKEN=<Bot User Token is Here>
+Edited The following valiable in `.env`.
 
-## PowerShell
-$env:SLACK_SIGNING_SECRET = "<Slack Signing Secret is Here>"
-$env:SLACK_BOT_TOKEN = "<Slack Signing Secret is Here>"
+- SLACK_BOT_TOKEN
+- SLACK_SIGNING_SECRET
 
-```
 
+## Packege Install
 ```
-# Packege Install
 npm install
 ```
 
-### Launch
+## Start app
 
 ```
-node ./src/app.js
+serverless offline
 ```
 
-Use an application that proxies to the local host, such as [ngrok](https://ngrok.com/).
+Use an application that proxies to the `localhost`, such as [ngrok](https://ngrok.com/).
 
 ## Deploy
-
-use serverless
-
-```
-# Please install for global options.
-npm install serverless  --g
-```
 
 ```
 serverless deploy
